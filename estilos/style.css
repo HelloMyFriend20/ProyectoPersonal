@@ -4,13 +4,29 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* Seccion de inicio */
-.inicio {
-    padding: 10%;
+body {
     background-image: url(../imagenes/fondo.jpeg);
     background-size: cover;
     background-position: center;
+}
+/*Encabezado */
+.encabezado {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 1%;
+    color: #fff;
+    text-align: justify;
+}
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 5%;
+    }
+    
+}
+/* Seccion de inicio */
+.inicio {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
 }
 .inicio > h1 {
@@ -20,6 +36,10 @@
     border-radius: 100px;
 }
 @media (max-width: 768px) {
+    .inicio {
+        padding: 10%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
     .inicio > h1 {
         font-size: clamp(1.5rem, 2.5vw, 3rem);
         text-align: center;
@@ -29,7 +49,6 @@
 /* Seccion principal */
 .principal {
     padding: 5%;
-    background-color: #f0f0f0;
     color: #000;
     display: flex;
     flex-wrap: wrap;
@@ -39,6 +58,58 @@
     width: 200px;
 }
 .principal1 > a > img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+@media (max-width: 768px) {
+    .principal {
+        padding: 10%;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .principal1 > a > img {
+        width: 150px;
+    }
+}
+/* Footer */
+footer {
+    background-color: #000000;
+    color: #F4F1EA;
+    padding: 5% 2%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que los bloques se acomoden mejor */
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+footer .datos {
+    flex: 1 1 0px; /* Se adaptan */
+    max-width: 400px; /* Tamaño máximo */
+}
+footer .datos p {
+    margin-bottom: 10px;
+    color: #F4F1EA;
+    text-align: justify;
+}
+footer .redes_sociales {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1 1 0px; /* Se adaptan */
+    max-width: 400px; /* Tamaño máximo */
+}
+footer .redes_sociales a {
+    color: #F4F1EA;
+    text-decoration: none;
+    font-weight: bold;
+}
+footer .redes_sociales img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+footer .redes_sociales img:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }

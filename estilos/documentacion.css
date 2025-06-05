@@ -1,0 +1,47 @@
+* {
+    font-family: 'montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url(../imagenes/fondo.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+/*Encabezado */
+.encabezado {
+    background-color: rgba(0, 0, 0, 1);
+    padding: 1%;
+    color: #fff;
+    text-align: justify;
+}
+@media (max-width: 768px) {
+    .encabezado {
+        padding: 5%;
+    }
+    
+}
+/* Seccion de inicio */
+.inicio {
+    padding-top: 2%;
+    padding-bottom: 3%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+}
+.inicio > h1 {
+    font-size: clamp(2rem, 3vw, 4rem);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 100px;
+}
+@media (max-width: 768px) {
+    .inicio {
+        padding: 10%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    .inicio > h1 {
+        font-size: clamp(1.5rem, 2.5vw, 3rem);
+        text-align: center;
+    }
+}
